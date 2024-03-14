@@ -1,0 +1,89 @@
+<html>
+<head>
+	<title>Family</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		body {
+  			background-image: url(Dedsec.jpg);
+  			background-position: left bottom;
+		}
+	</style>
+</div>
+<body>
+	<div class="topnav">
+		<a href="Home.html">Home</a>
+		<a href="Hobbies.html">Hobbies</a>
+		<a class="active" href="Family.html">My Family</a>
+		<a href="Feedback.html">Leave Feedback</a>
+		<a href="Devs.html">Devs</a>
+	</div>
+	<br>
+	<h1 class="title">Family</h1>
+	<br>
+	<img src="Family.png" style="height: 250px; width: 250px;" class="imgcenterwithBorder">
+	<br>
+	<div class="story">
+		<h3>Get More Info About My Family</h3>
+		<script>
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					var myObj = JSON.parse(this.responseText);
+					document.getElementById("fname").innerHTML = myObj['father']['name'];
+					document.getElementById("fage").innerHTML = myObj['father']['age'];
+					document.getElementById("fdob").innerHTML = myObj['father']['dob'];
+					document.getElementById("mname").innerHTML = myObj['mother']['name'];
+					document.getElementById("mage").innerHTML = myObj['mother']['age'];
+					document.getElementById("mdob").innerHTML = myObj['mother']['dob'];
+					document.getElementById("sname").innerHTML = myObj['sister']['name'];
+					document.getElementById("sage").innerHTML = myObj['sister']['age'];
+					document.getElementById("sdob").innerHTML = myObj['sister']['dob'];
+					document.getElementById("myname").innerHTML = myObj['me']['name'];
+					document.getElementById("myage").innerHTML = myObj['me']['age'];
+					document.getElementById("mydob").innerHTML = myObj['me']['dob'];
+				}
+			};
+			xmlhttp.open("GET", "http://localhost/Family.php", true);
+			xmlhttp.send();
+		</script>
+		<table id="table">
+			<tr> 
+				<th>Name</th> 
+				<th>Age</th>
+				<th>DOB</th>
+			</tr> 
+			<tr> 
+				<td id="fname"></td>  
+				<td id="fage"></td>
+				<td id="fdob"></td>    
+			</tr> 
+			<tr> 
+				<td id="mname"></td>  
+				<td id="mage"></td>
+				<td id="mdob"></td>    
+			</tr> 
+			<tr> 
+				<td id="sname"></td>  
+				<td id="sage"></td>
+				<td id="sdob"></td>    
+			</tr> 
+			<tr> 
+				<td id="myname"></td>  
+				<td id="myage"></td>
+				<td id="mydob"></td>    
+			</tr> 
+		</table>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<footer>
+		<p>© Copyright 2021</p>
+		<p>All Rights Served</p>
+		<img src="Site Logo.jpg" class="imgcenter" style="height: 90px; width: 198px;">
+	</footer>
+</body>
+
+</html>

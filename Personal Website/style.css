@@ -1,0 +1,155 @@
+/* *** STYLE *** */
+h1 {
+  text-align: center;
+  color: black;
+  font-family: Helvetica;
+}
+h2 {
+  color: black;
+  text-align: center;
+  font-family: Helvetica;
+}
+h3 {
+  color: black;
+  text-align: center;
+  font-family: Helvetica;
+}
+p {
+  color: black;
+  text-align: center;
+  font-family: Helvetica;
+}
+footer {
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  background-color: #ff1065;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 100%;
+  background-color: #ff1065;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #FE659B;
+}
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.form{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.content {
+  flex: 1 0 auto;
+}
+.imgcenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.imgcenterwithBorder {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-width: : 5px;
+  box-shadow: 10px 10px 8px 1px black;
+}
+.story {
+   background-color: white;
+   margin: auto;
+   border-style: solid;
+   border-width: 4px;
+   box-shadow: 10px 10px 8px 1px black;
+   width: 80%;
+}
+.title {
+   background-color: white;
+   width: 200px;
+   margin: auto;
+   border-style: solid;
+   border-width: 1px;
+   border-color: black;
+   box-shadow: 10px 10px 8px 1px black;
+}
+#table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#table td, #table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#table tr:nth-child(even){background-color: #f2f2f2;}
+
+#table tr:hover {background-color: #ddd;}
+
+#table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #ff1065;
+  color: white;
+}
+
+
+
+/* *** NAVIGATION BAR *** /*
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: Helvetica;
+  margin: auto;
+  width: 23%;
+}
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ff1065;
+  color: black;
+}
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #ff1065;
+  color: white;
+}
+.topnav a.active:hover {
+  background-color: #FE659B;
+  color: white;
+}

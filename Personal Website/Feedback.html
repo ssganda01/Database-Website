@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>Leave Feedback</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		body {
+  			background-image: url(Dedsec.jpg);
+  			background-position: right bottom;
+		}
+	</style>
+</head>
+</div>
+<body>
+	<div class="topnav">
+		<a href="Home.html">Home</a>
+		<a href="Hobbies.html">Hobbies</a>
+		<a href="Family.html">My Family</a>
+		<a class="active" href="Feedback.html">Leave Feedback</a>
+		<a href="Devs.html">Devs</a>
+	</div>
+	<br>
+	<h1 class="title">Leave Feedback</h1>
+	<br>
+	<img src="Feedback.png" style="height: 250px; width: 250px;" class="imgcenterwithBorder">
+	<br>
+	<div class="story">
+		<h3>Tell Us How You Like (Or Dislike) Our Website!</h3>
+		<p>When we get feedback from users like you, we can improve overall user experience.</p>
+	</div>
+	<br>
+	<div class="form">
+		<form action="http://localhost/feedbackLogger.php" method="post" target="_blank" name="form">
+			<!--Inside the form, let’s put some input fields. -->
+			<input name="name" type="text" placeholder="Your name" required/>
+			<br>
+			<input name="email" type="text" placeholder="Email" required/>
+			<br>
+			<input size="30" name="header" type="text" placeholder="Subject" required/>
+			<br>
+			<textarea cols="32" name="message" rows="5" placeholder="Your message"></textarea>
+			<br>
+			<!--Let’s add a button that submits this form to the server. -->
+			<input type="submit" target="_blank" value="Submit">
+		</form>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<footer>
+		<p>© Copyright 2021</p>
+		<p>All Rights Served</p>
+		<img src="Site Logo.jpg" class="imgcenter" style="height: 90px; width: 198px;">
+	</footer>
+</body>
+
+</html>

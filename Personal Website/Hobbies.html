@@ -1,0 +1,76 @@
+<html>
+<head>
+	<title>Hobbies</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		body {
+  			background-image: url(Dedsec.jpg);
+  			background-position: top center;
+		}
+	</style>
+</head>
+</div>
+<body>
+	<div class="topnav">
+		<a href="Home.html">Home</a>
+		<a class="active" href="Hobbies.html">Hobbies</a>
+		<a href="Family.html">My Family</a>
+		<a href="Feedback.html">Leave Feedback</a>
+		<a href="Devs.html">Devs</a>
+	</div>
+	<br>
+	<h1 class="title">Hobbies</h1>
+	<br>
+	<img src="Hobbies.jpg" style="height: 250px; width: 250px;" class="imgcenterwithBorder">
+	<br>
+	<div class="story" style="text-align: center;">
+		<h3>My hobbies</h3>
+		<table id="demo"></table>
+		<script type="text/javascript">
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					var myObj = JSON.parse(this.responseText);
+					document.getElementById("hobby1").innerHTML = myObj[0];
+					document.getElementById("hobby2").innerHTML = myObj[1];
+					document.getElementById("hobby3").innerHTML = myObj[2];
+				}
+			};
+			xmlhttp.open("GET", "http://localhost/Hobbies.php", true);
+			xmlhttp.send();
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.visibility == 'hidden')
+          e.style.visibility = 'visible';
+       else
+          e.style.visibility = 'hidden';
+    }
+		</script>
+		<button type="button" onclick="toggle_visibility('table')">Reveal/Hide Hobbies</button>
+		<table id="table" style="visibility: hidden; text-align: center;">
+			<tr> 
+				<th style="text-align: center;">Hobbies:</th> 
+			</tr> 
+			<tr> 
+				<td id="hobby1" style="text-align: center;"></td>  
+			</tr> 
+			<tr>
+				<td id="hobby2" style="text-align: center;"></td>
+			</tr>
+			<tr>
+				<td id="hobby3" style="text-align: center;"></td> 
+			</tr>
+		</table>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<footer>
+		<p>© Copyright 2021</p>
+		<p>All Rights Served</p>
+		<img src="Site Logo.jpg" class="imgcenter" style="height: 90px; width: 198px;">
+	</footer>
+</body>
+
+</html>
